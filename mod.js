@@ -2,9 +2,9 @@ function handleRequest(request) {
     const { pathname } = new URL(request.url);
   
     if (pathname.startsWith("/big")) {
-      const html = `<html><head><meta http-equiv="refresh" content="1.5;/sauce"></head>
+      const html = `<html><head><meta http-equiv="refresh" content="1.5;/sauce"><title>BIG</title></head>
         <style>html,body {margin:0;padding:0;}body{height:100%;min-height:100vh;display:grid;place-content:center;}</style>
-        <body><h1 style="background: red; color: white;">BIG</h1></body>
+        <body><div style="height: 100%; width: 100%; font-size: 4rem;background: red; color: white;">BIG</div></body>
         </html>`;
   
       return new Response(html, {
@@ -20,9 +20,9 @@ function handleRequest(request) {
     }
   
     if (pathname.startsWith("/sauce")) {
-        const html = `<html><head><meta http-equiv="refresh" content="1.5;/big"></head>
+        const html = `<html><head><meta http-equiv="refresh" content="1.5;/big"><title>SAUCE</title></head>
             <style>html,body {margin:0;padding:0;}body{height:100%;min-height:100vh;display:grid;place-content:center;}</style>
-            <body><h1 style="background: red; color: white;">SAUCE</h1></body>
+            <body><div style="height: 100%; width: 100%; font-size: 4rem;background: red; color: white;">SAUCE</div></body>
           </html>`;
     
         return new Response(html, {
