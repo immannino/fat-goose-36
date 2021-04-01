@@ -1,7 +1,7 @@
 function handleRequest(request) {
     const { pathname } = new URL(request.url);
   
-    if (pathname.startsWith("/html")) {
+    if (pathname.startsWith("/big")) {
       const html = `<html><head><meta http-equiv="refresh" content="1.5;/sauce"></head>
         <h1 style="background: red; color: white;">BIG</h1>
         </html>`;
@@ -18,7 +18,7 @@ function handleRequest(request) {
       });
     }
   
-    if (pathname.startsWith("/json")) {
+    if (pathname.startsWith("/sauce")) {
         const html = `<html><head><meta http-equiv="refresh" content="1.5;/big"></head>
           <h1 style="background: red; color: white;">SAUCE</h1>
           </html>`;
@@ -42,7 +42,7 @@ function handleRequest(request) {
       >
         <h1>Return JSON and/or HTML Example</h1>
         <p>
-          <a href="/Big">start</a>
+          <a href="/big">start</a>
         </p>
       </body>`,
       {
