@@ -3,7 +3,8 @@ function handleRequest(request) {
   
     if (pathname.startsWith("/big")) {
       const html = `<html><head><meta http-equiv="refresh" content="1.5;/sauce"></head>
-        <h1 style="background: red; color: white;">BIG</h1>
+        <style>html,body {margin:0;padding:0;}body{height:100%;min-height:100vh;display:grid;place-content:center;}</style>
+        <body><h1 style="background: red; color: white;">BIG</h1></body>
         </html>`;
   
       return new Response(html, {
@@ -20,7 +21,8 @@ function handleRequest(request) {
   
     if (pathname.startsWith("/sauce")) {
         const html = `<html><head><meta http-equiv="refresh" content="1.5;/big"></head>
-          <h1 style="background: red; color: white;">SAUCE</h1>
+            <style>html,body {margin:0;padding:0;}body{height:100%;min-height:100vh;display:grid;place-content:center;}</style>
+            <body><h1 style="background: red; color: white;">SAUCE</h1></body>
           </html>`;
     
         return new Response(html, {
